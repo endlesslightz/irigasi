@@ -2,6 +2,30 @@
     margin-left: 0;
 }
 
+.pos-tengah>img {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.kanvas-container {
+    height: 250px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container>div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    /* border-radius: 25%; */
+}
+
 .cctv {
     width: 100%;
     height: 50%;
@@ -43,7 +67,7 @@
 }
 
 .content-wrap {
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     height: 100vh;
 }
 

@@ -36,6 +36,17 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/_con/css/tambahan.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 
+    <?php
+    if ($link != 'dashboard') {
+    ?>
+        <link rel="stylesheet" href="<?= base_url(); ?>/assets/DataTables/datatables.min.css">
+        <script src="<?= base_url(); ?>/assets/Highcharts/code/highcharts.js"></script>
+        <script src="<?= base_url(); ?>/assets/Highcharts/code/modules/exporting.js"></script>
+        <script src="<?= base_url(); ?>/assets/Highcharts/code/modules/export-data.js"></script>
+        <script src="<?= base_url(); ?>/assets/Highcharts/code/modules/accessibility.js"></script>
+    <?php
+    }
+    ?>
 </head>
 
 <body onload="startTime()">
@@ -51,7 +62,7 @@
             <!-- Sidebar toggle -->
 
             <!-- Logo -->
-            <a href="home" class="brand-logo margin-kiri">
+            <a href="<?= base_url(); ?>" class="brand-logo margin-kiri">
                 <img class="logoFull" src="<?= base_url(); ?>/assets/images/title.png" alt="Logo">
                 <img class="logoMini" src="<?= base_url(); ?>/assets/images/title.png" alt="Logo">
 
@@ -183,6 +194,30 @@
     <?php if ($link == 'dashboard') { ?>
         <script type="text/javascript" src="<?= base_url(); ?>/assets/js/data.js"></script>
     <?php } ?>
+    <?php
+    if ($link == 'grafik') {
+    ?>
+        <script src="<?= base_url(); ?>/assets/DataTables/datatables.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#tabel').DataTable({
+                    "bFilter": false,
+                    "dom": 'rtip'
+                });
+
+
+                $("#sensor").change(function() {
+                    let id = $(this).val();
+                    let url = window.location.href.split("/");
+                    url[url.length - 1] = "" + id;
+                    var newurl = url.join("/");
+                    window.location = newurl;
+                });
+            });
+        </script>
+    <?php
+    }
+    ?>
 
 </body>
 

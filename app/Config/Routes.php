@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/pos/(:segment)', 'Pos::index/$1');
-$routes->get('/grafik/(:segment)', 'Grafik::index/$1');
+$routes->get('/grafik/(:segment)/(:segment)', 'Grafik::index/$1/$2');
 
 // ==========================================
 
@@ -49,6 +49,13 @@ $routes->get('/api/bsa1/(:segment)/', 'Api::get_bsa1/$1');
 $routes->get('/api/bsa10/(:segment)/', 'Api::get_bsa10/$1');
 $routes->get('/api/bpk8/(:segment)/', 'Api::get_bpk8/$1');
 $routes->get('/api/bmj1/(:segment)/', 'Api::get_bmj1/$1');
+$routes->get('/api/debitbsa1/(:segment)/', 'Api::get_debit_bsa1/$1');
+$routes->get('/api/debitbsa10/(:segment)/', 'Api::get_debit_bsa10/$1');
+$routes->get('/api/debitbpk8/(:segment)/', 'Api::get_debit_bpk8/$1');
+$routes->get('/api/debitbmj1/(:segment)/', 'Api::get_debit_bmj1/$1');
+$routes->get('/api/supplaibsa1/', 'Api::get_supply_bsa1');
+$routes->get('/api/supplaibsa10/', 'Api::get_supply_bsa10');
+$routes->get('/api/supplaibpk8/', 'Api::get_supply_bpk8');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

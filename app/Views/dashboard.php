@@ -100,12 +100,12 @@
 <section class="content-wrap content-utama">
     <img src="<?= base_url(); ?>/assets/images/background.jpg" class="background">
 
-    <a class="label-bsa1" href="#">Pintu Bagi B.Sa.1</a>
-    <a class="label-bpk8" href="#">Pintu Bagi B.Pk.8</a>
-    <a class="label-bsa10" href="#">Pintu Bagi B.Sa.10</a>
-    <a class="label-bmrn1" href="#">Pintu Sadap B.Mrn.1.Ki</a>
-    <a class="label-bpk8te" href="#">Pintu Sadap B.Pk.8.Te</a>
-    <a class="label-bmj1" href="#">Pintu Sadap B.Mj.1</a>
+    <a class="label-bsa1" href="pos/bsa1">Pintu Bagi B.Sa.1</a>
+    <a class="label-bpk8" href="pos/bpk8">Pintu Bagi B.Pk.8</a>
+    <a class="label-bsa10" href="pos/bsa10">Pintu Bagi B.Sa.10</a>
+    <a class="label-bmrn1" href="pos/bmrn1">Pintu Sadap B.Mrn.1.Ki</a>
+    <a class="label-bpk8te" href="pos/bpk8te">Pintu Sadap B.Pk.8.Te</a>
+    <a class="label-bmj1" href="pos/bmj1">Pintu Sadap B.Mj.1</a>
 
     <h6 class="ket-bsa1">Supplai air irigasi :<br>Kebutuhan air irigasi :<br>Selisih/Variance :</h6>
     <h6 class="ket-bpk8">Supplai air irigasi :<br>Kebutuhan air irigasi :<br>Selisih/Variance :</h6>
